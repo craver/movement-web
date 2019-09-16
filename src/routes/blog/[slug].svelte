@@ -57,8 +57,14 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<h1>{post.title}11</h1>
+
+
+<li><a href='test1'>test1</a></li>
+<li><a href='test2'>test2</a></li>
 
 <div class='content'>
 	{@html post.html}
 </div>
+
+

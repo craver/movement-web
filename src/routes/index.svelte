@@ -11,15 +11,6 @@
 		margin: 0 0 0.5em 0;
 	}
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
 
 	p {
 		margin: 1em auto;
@@ -36,14 +27,10 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great !</h1>
+<li><a href='test1'>test1</a></li>
+<li><a href='test2'>test2</a></li>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH 2 !</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<h1>Great ! 12334455</h1>
 
 <div class="bs-example">
     <!-- Button HTML (to Trigger Modal) -->

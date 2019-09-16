@@ -52,7 +52,7 @@ overflow: visible;
 
 
 </path>
-<a class="test1" href="test">sdfsdfsdf</a>
+<a class="test1">sdfsdfsdf</a>
 </svg>
 
 <svg height="30" width="200">

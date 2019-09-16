@@ -2,6 +2,10 @@
   "name": "TODO",
   "description": "TODO",
   "version": "0.0.1",
+  "author": {
+    "name": "Tom Biel"
+  },
+  "homepage": "https://github.com/tom-biel/movement-web",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
@@ -12,15 +16,24 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "aws-sdk": "^2.526.0",
     "compression": "^1.7.1",
+    "express": "^4.17.1",
+    "helmet": "^3.21.0",
+    "lottie-web": "^5.5.9",
     "polka": "next",
-    "sirv": "^0.4.0"
+    "sirv": "^0.4.0",
+    "svelte-select": "^3.0.0",
+    "sveltestrap": "^3.1.1"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
     "sapper": "^0.27.0",
-    "svelte": "^3.0.0",
+    "svelte": "^3.12.1",
     "svelte-loader": "^2.9.0",
-    "webpack": "^4.7.0"
+    "svelte-material-ui": "^1.0.0-beta.15",
+    "svelte-preprocess": "^3.1.1",
+    "webpack": "^4.7.0",
+    "sass-loader": "^8.0.0"
   }
 }
