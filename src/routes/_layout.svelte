@@ -5,6 +5,27 @@
 </script>
 
 <style>
+
+  @media (max-width: 800px) {
+
+    .testMedia {
+      background-color: blue;
+   
+    }
+
+   /* PUT CSS HERE TO ALTER WEBSITE TO SINGLE COLUMN */
+  }
+
+   @media (max-width: 600px) {
+
+    .testMedia {
+      background-color: red;
+
+    }
+
+   /* PUT CSS HERE TO ALTER WEBSITE TO SINGLE COLUMN */
+  }
+
 	main {
 		position: relative;
 		max-width: 56em;
@@ -17,6 +38,6 @@
 
 <Nav {segment}/>
 
-<main>
+<main class="testMedia">
 	<slot></slot>
 </main>

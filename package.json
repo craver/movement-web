@@ -7,7 +7,8 @@
   },
   "homepage": "https://github.com/tom-biel/movement-web",
   "scripts": {
-    "dev": "sapper dev",
+    "dev": "cross-env NODE_ENV=dev PORT=3000 npm run dev:app",
+    "dev:app": "sapper dev",
     "build": "sapper build",
     "export": "sapper export",
     "start": "node __sapper__/build",
@@ -27,13 +28,15 @@
     "sveltestrap": "^3.1.1"
   },
   "devDependencies": {
+    "cross-env": "^6.0.0",
+    "http-proxy-middleware": "^0.20.0",
     "npm-run-all": "^4.1.5",
     "sapper": "^0.27.0",
+    "sass-loader": "^8.0.0",
     "svelte": "^3.12.1",
     "svelte-loader": "^2.9.0",
     "svelte-material-ui": "^1.0.0-beta.15",
     "svelte-preprocess": "^3.1.1",
-    "webpack": "^4.7.0",
-    "sass-loader": "^8.0.0"
+    "webpack": "^4.7.0"
   }
 }

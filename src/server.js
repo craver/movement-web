@@ -1,6 +1,8 @@
 import sirv from 'sirv';
 //import polka from 'polka';
 import express from 'express'
+import proxy from 'http-proxy-middleware';
+
 import compression from 'compression';
 import * as sapper from '@sapper/server';
 
@@ -11,6 +13,16 @@ const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
 const app = express()
+
+app.use(
+  '/api',
+  proxy({ target: 'https://swapi.co/', changeOrigin: true })
+);
+
+//proxy({ target: 'https://swapi.co/api/', changeOrigin: true })
+// http://localhost:8890/users
+// https://swapi.co/api/people/
+
 //app.use(helmet())
 
 /* test */
@@ -40,7 +52,5 @@ app.use(
   sirv('static', { dev }),
   sapper.middleware()
 )
-
-
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))

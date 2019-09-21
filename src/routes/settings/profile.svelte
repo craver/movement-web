@@ -6,13 +6,26 @@
 </script>
 
 <script>
+  import { onMount } from "svelte";
+  
 	let key;
-	let keyCode;
+  let keyCode;
+  
+  let people = [];
 
 	function handleKeydown(event) {
 		key = event.key;
 		keyCode = event.keyCode;
-	}
+  }
+  
+  onMount(async () => {
+      const res = await fetch(
+        `https://swapi.co/api/people/`
+      );
+
+    people = await res.json();
+  });
+
 </script>
 
 <style>

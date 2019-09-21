@@ -5,6 +5,8 @@
 		const res = await this.fetch(`blog/${params.slug}.json`);
 		const data = await res.json();
 
+    console.log(`Fetched blog: ${data}`);
+
 		if (res.status === 200) {
 			return { post: data };
 		} else {

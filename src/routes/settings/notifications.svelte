@@ -1,5 +1,13 @@
 <script context="module">
+  export async function preload({ params, query }) {
 
+    const res = await this.fetch(`https://jsonplaceholder.typicode.com/photos?_limit=20`);
+    const data = await res.json();
+
+    console.log(`Fetched typicode photos: ${data}`);
+
+    return { photos: data };
+  }
 </script>
 
 <script>
@@ -15,32 +23,32 @@
 
   let list = [1, 2, 3];
 
-  export const condition = true;
+  //export const condition = true;
 
-  let photos = [];
+  export let photos = [];
 
-  onMount(async () => {
-    const res = await fetch(
-      `https://jsonplaceholder.typicode.com/photos?_limit=20`
-    );
-    photos = await res.json();
-  });
+  // onMount(async () => {
+  //   const res = await fetch(
+  //     `https://jsonplaceholder.typicode.com/photos?_limit=20`
+  //   );
+  //   photos = await res.json();
+  // });
 
-  onMount(async () => {
-    let lottie;
-    const module = await import("./lottie.js");
-    lottie = module.default;
+  // onMount(async () => {
+  //   let lottie;
+  //   const module = await import("./lottie.js");
+  //   lottie = module.default;
 
-    lottie.loadAnimation({
-      container: document.querySelector("#testBox"), // the dom element that will contain the animation
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "animations/test2.json" // the path to the animation json
-    });
-  });
+  //   lottie.loadAnimation({
+  //     container: document.querySelector("#testBox"), // the dom element that will contain the animation
+  //     renderer: "svg",
+  //     loop: true,
+  //     autoplay: true,
+  //     path: "animations/test2.json" // the path to the animation json
+  //   });
+  // });
 
-  export let count = 0;
+  let count = 0;
 </script>
 
 <style>
@@ -60,12 +68,6 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 8px;
     background-color: var(--chame-color-eyes);
-  }
-
-  figure,
-  img {
-    width: 100%;
-    margin: 0;
   }
 
   #testBox {
