@@ -19,7 +19,7 @@
   "dependencies": {
     "aws-sdk": "^2.526.0",
     "compression": "^1.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "helmet": "^3.21.0",
     "lottie-web": "^5.5.9",
     "polka": "next",
